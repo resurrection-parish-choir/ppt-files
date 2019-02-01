@@ -29,7 +29,9 @@
 
         $('.ui.sidebar')
           .sidebar({
-            transition: 'overlay'
+            transition: 'overlay',
+            mobileTransition: 'overlay',
+            scrollLock: true
           })
           .sidebar('attach events', '.toc.item')
         ;
