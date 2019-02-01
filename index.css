@@ -1,0 +1,112 @@
+body .pusher {
+  color: #356859;
+  background-color: #FFFBE6 !important;
+}
+
+.header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ui.main.menu {
+  border-radius: 0;
+  border: none;
+  background-color: #356859;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+}
+
+
+.grid.container > .row {
+  margin-top: 2em;
+}
+
+.ui.vertical.sidebar.menu {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
+}
+
+.ui.footer.segment {
+  margin: 5em 0em 0em;
+  padding: 5em 0em;
+}
+
+.ui.card {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+
+.ui.green.button {
+  background-color: #356859;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  transition: all 0.25 ease-in-out;
+}
+
+.ui.green.button:hover, .ui.green.button:focus {
+  background-color: #37966F;
+}
+.ui.green.button:active {
+  background-color: #37966F;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+.ui.fab.button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+.ui.fab.button:active {
+  background-color: #37966F;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, .14), 0 3px 20px 0 rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+.ui.snackbar.segment .right.column {
+  font-weight: 900;
+  color: #B9E4C9;
+}
+
+.ui.snackbar.segment {
+  visibility: hidden;
+  position: fixed;
+  min-width: 96vw;
+  margin-left: -48vw;
+  left: 50%;
+  bottom: 4.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+}
+
+.ui.snackbar.segment.show {
+  visibility: visible;
+  animation: fadein 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), fadeout 0.2s cubic-bezier(0.4, 0.0, 1, 1) 3.8s;
+}
+
+.main.menu .link.item {
+  clip-path: circle(35% at 50% 50%);
+}
+
+
+@media(min-width: 1024px) {
+  .ui.fab.button {
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+  }
+
+  .ui.snackbar.segment {
+    min-width: 600px;
+    margin-left: -300px;
+    left: 50%;
+    bottom: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
+  }
+
+}
+
+/* Snackbar Animations */
+@keyframes fadein {
+  from {transform: scale(0.9); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+@keyframes fadeout {
+  from {transform: scale(1); opacity: 1;}
+  to {transform: scale(0.9); opacity: 0;}
+}
