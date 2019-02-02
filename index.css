@@ -3,8 +3,21 @@ body .pusher {
   background-color: #FFFBE6 !important;
 }
 
-.header {
+.main.menu .header {
   font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar .title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-top: 1em;  
+  margin-bottom: .25em;
+}
+.sidebar .subtitle {
+  color: #9E9E9E;
+  font-weight: 100; 
+  margin-bottom: 1.5em; 
 }
 
 .ui.main.menu {
@@ -14,7 +27,6 @@ body .pusher {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
 }
 
-
 .grid.container > .row {
   margin-top: 2em;
 }
@@ -22,6 +34,31 @@ body .pusher {
 .ui.vertical.sidebar.menu {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2);
 }
+
+.ui.sidebar {
+  background: #FFFFFF;
+}
+
+.ui.sidebar .ui.secondary.menu {
+  padding: 1em;
+  border-radius: 0;
+}
+
+.ui.secondary.menu .active.item {
+  background-color: rgba(53, 104, 89, 0.12);
+  color: #356859;
+  font-weight: 600; 
+}
+
+.ui.secondary.menu .active.item:hover {
+  background-color: rgba(53, 104, 89, 0.12);
+  color: #356859;
+}
+
+.ui.secondary.menu .item {
+  color: #616161;
+}
+
 
 .ui.footer.segment {
   margin: 5em 0em 0em;
