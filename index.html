@@ -59,7 +59,7 @@
 <body>
 
   <div class="ui sidebar">
-    <div class="ui fluid secondary vertical menu">
+    <div class="ui fluid secondary small vertical menu">
       <div class="title">Sunday Liturgy</div>
       <div class="subtitle"></div>
 
@@ -82,6 +82,37 @@
 
       <div class="ui divider"></div>
 
+      <div class="item">
+        <div class="ui sub header">Labels</div>
+      </div>
+
+      <a class="item">
+        <div class="ui relaxed grid">
+          <div class="row">
+            <div class="column"><i class="material-icons">bookmark</i></div>
+            <div class="middle aligned ten wide column">Year A</div>
+          </div>
+        </div>
+      </a>
+      <a class="item">
+        <div class="ui relaxed grid">
+          <div class="row">
+            <div class="column"><i class="material-icons">bookmark</i></div>
+            <div class="middle aligned ten wide column">Year B</div>
+          </div>
+        </div>
+      </a>
+      <a class="item">
+        <div class="ui relaxed grid">
+          <div class="row">
+            <div class="column"><i class="material-icons">bookmark</i></div>
+            <div class="middle aligned ten wide column">Year C</div>
+          </div>
+        </div>
+      </a>
+
+      <div class="ui divider"></div>
+
       <a class="item">
         <div class="ui relaxed grid">
           <div class="row">
@@ -93,7 +124,7 @@
       <a class="item">
         <div class="ui relaxed grid">
           <div class="row">
-            <div class="column"><i class="material-icons">feedback</i></div>
+            <div class="column"><i class="material-icons">help_outline</i></div>
             <div class="middle aligned ten wide column">Help & Feedback</div>
           </div>
         </div>
@@ -102,9 +133,10 @@
     </div>
   </div>
 
+  
   <div class="pusher">
-
-    <div class="ui borderless inverted main menu">
+    
+    <div class="ui borderless inverted fixed main menu">
       <div class="ui text container">
         <div class="link toc item">
             <i class="material-icons">menu</i>
@@ -120,24 +152,53 @@
       </div>
     </div>
 
-    <div class="ui grid container">
-      <div class="one column row">
-        <div class="ui centered card">
-          <div class="content">
-            <div class="header">Forthcoming</div>
-            <div class="meta">3 February, 2019</div>
-            <div class="description">
-              4<sup>th</sup> Sunday in Ordinary Time
+    <div class="ui main grid">
+      <div class="column">
+        <div class="ui stackable cards">
+
+          <div class="ui fluid centered card">
+            <div class="content">
+              <div class="header">Forthcoming</div>
+              <div class="meta">3 February, 2019</div>
+              <div class="description">
+                4<sup>th</sup> Sunday in Ordinary Time
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="right floated">
+                <button class="ui green button"
+                  onclick="window.location.href='pdf/fourth-sunday-ot.pdf'">
+                  DOWNLOAD
+                </button>
+              </span>
             </div>
           </div>
-          <div class="extra content">
-            <span class="right floated">
-              <button class="ui green button"
-                onclick="window.location.href='/pdf/fourth-sunday-ot.pdf'">
-                DOWNLOAD
-              </button>
-            </span>
+
+          <div class="ui fluid centered card">
+            <div class="content">
+              <div class="header">Contents</div>
+            </div>
+            <div class="content">
+              <div class="ui three column grid">
+                <div class="column">Entrance</div>
+                <div class="column">407</div>
+                <div class="column">Oh the word of my Lord</div>
+                <div class="column">Offeratory</div>
+                <div class="column">123</div>
+                <div class="column">Blest are you Lord</div>
+                <div class="column">Communion</div>
+                <div class="column">141</div>
+                <div class="column">A new commandment</div>
+                <div class="column">Post Communion</div>
+                <div class="column">176</div>
+                <div class="column">This is my commandment</div>
+                <div class="column">Recessional</div>
+                <div class="column">205</div>
+                <div class="column">Walk with me O my Lord</div>
+              </div>
+            </div>
           </div>
+       
         </div>
       </div>
 

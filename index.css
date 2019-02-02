@@ -7,11 +7,16 @@ body .pusher {
   font-family: 'Montserrat', sans-serif;
 }
 
+.ui.cards .card .content > .header {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .sidebar .title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1.5em;
-  margin-top: 1em;  
+  margin-top: 1em;
+  margin-left: 1em;
   margin-bottom: .25em;
 }
 .sidebar .subtitle {
@@ -20,15 +25,14 @@ body .pusher {
   margin-bottom: 1.5em; 
 }
 
-.ui.main.menu {
-  border-radius: 0;
-  border: none;
+.ui.fixed.main.menu {
+  z-index: 6;
   background-color: #356859;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
 }
 
-.grid.container > .row {
-  margin-top: 2em;
+.sidebar .grid .row {
+  padding-left: 8px;
 }
 
 .ui.sidebar {
@@ -40,14 +44,16 @@ body .pusher {
 }
 
 .ui.sidebar .ui.secondary.menu {
-  padding: 1em;
-  border-radius: 0;
+  margin: 0;
+  padding-right: 0.75em;
 }
 
 .ui.secondary.menu .active.item {
   background-color: rgba(53, 104, 89, 0.12);
   color: #356859;
-  font-weight: 600; 
+  font-weight: 600;
+  border-top-right-radius: 360px !important;
+  border-bottom-right-radius: 360px !important;
 }
 
 .ui.secondary.menu .active.item:hover {
@@ -59,13 +65,27 @@ body .pusher {
   color: #616161;
 }
 
+.ui.secondary.menu .item:hover {
+  border-top-right-radius: 360px !important;
+  border-bottom-right-radius: 360px !important;
+}
+
 
 .ui.footer.segment {
   margin: 5em 0em 0em;
   padding: 5em 0em;
 }
 
-.ui.card {
+.main.grid {
+  margin-top: 2em;
+  margin-bottom: 7em;
+}
+.ui.cards .ui.fluid.card {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.ui.cards .card {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
 
@@ -131,6 +151,12 @@ body .pusher {
 
 
 @media(min-width: 1024px) {
+
+  .main.grid {
+    margin-left: 2em;
+    margin-right: 2em;  
+  }
+ 
   .ui.fab.button {
     bottom: 2rem;
     right: 2rem;
