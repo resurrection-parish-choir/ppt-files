@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <meta name="theme-color" content="#356859">
+  <meta name="theme-color" content="#2B4C3F">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -39,9 +39,15 @@
           .sidebar('attach events', '.toc.item')
         ;
 
+        $('.ui.sidebar .item')
+          .on('click', function () {
+            $('.ui.sidebar').sidebar('hide');
+          })
+        ;
+
         setTimeout(function () {
           $('.fab.button').removeClass('hidden');
-        },1000);
+        },1250);
 
       })
     ;
@@ -82,7 +88,11 @@
       <div class="ui divider"></div>
 
       <div class="item">
-        <div class="ui sub header">Labels</div>
+        <div class="ui relaxed grid">
+          <div class="left floated column">
+            <div class="ui sub header">Labels</div>
+          </div>
+        </div>
       </div>
 
       <a class="item">
@@ -207,9 +217,10 @@
       Nothing to look here !
     </div>
     
-    <button class="ui huge circular fab icon button hidden" onclick=showSnackbar()>
+    <button class="ui huge circular green fab icon button hidden" onclick=showSnackbar()>
       <i class="material-icons">add</i>
     </button>
+
   </div>
 
 </body>

@@ -70,6 +70,12 @@ body .pusher {
   border-bottom-right-radius: 360px !important;
 }
 
+.ui.secondary.menu .grid .left.column {
+  margin-left: 1em;
+}
+.ui.secondary.menu .grid .right.column {
+  margin-right: 1.5em;
+}
 
 .ui.footer.segment {
   margin: 5em 0em 0em;
@@ -97,11 +103,11 @@ body .pusher {
 }
 
 .ui.green.button:hover, .ui.green.button:focus {
-  background-color: #37966F;
+  background-color: #418875;
   transition-delay: 0s;
 }
 .ui.green.button:active {
-  background-color: #37966F;
+  background-color: #418875;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
 }
 
@@ -114,13 +120,10 @@ body .pusher {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  background: #FD5523; 
-  color: #FFFFFF;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ui.fab.button:active {
-  background: #FD5523;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, .14), 0 3px 20px 0 rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
 }
 
@@ -137,6 +140,7 @@ body .pusher {
   left: 50%;
   bottom: 4.5em;
   margin-bottom: 2em;
+  background-color: #212121; 
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2);
 }
 
@@ -182,4 +186,10 @@ body .pusher {
 @keyframes fadeout {
   from {transform: scale(1); opacity: 1;}
   to {transform: scale(0.99); opacity: 0;}
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.sidebar {
+    min-width: 75vw;
+  }
 }
