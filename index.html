@@ -1,17 +1,14 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- Standard Meta -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
 
   <meta name="theme-color" content="#2B4C3F">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <!-- Site Properties -->
   <title>Files | Resurrection Parish Choir</title>
 
   <script
@@ -19,210 +16,246 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
-
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
 
-  <link href="index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
-  <script>
-    $('document')
-      .ready(function () {
+  <style>
+    :root {
+      --mdc-theme-primary: #356859;
+      --mdc-theme-background: #FFFBE6;
+      --mdc-theme-secondary: #37966F;
+    }
 
-        $('.ui.sidebar')
-          .sidebar({
-            transition: 'overlay',
-            mobileTransition: 'overlay'
-          })
-          .sidebar('attach events', '.toc.item')
-        ;
+    .mdc-card .mdc-list-item__text,
+    .mdc-top-app-bar .mdc-top-app-bar__title {
+      font-family: 'Raleway', sans-serif;
+    }
+  
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background-color: #FFFBE6; 
+    }
+    .mdc-drawer-app-content {
+      flex: auto;
+      overflow: auto;
+      position: relative;
+    }
 
-        $('.ui.sidebar .item')
-          .on('click', function () {
-            $('.ui.sidebar').sidebar('hide');
-          })
-        ;
+    .main-content {
+      overflow: auto;
+      height: 100%;
+    }
 
-        setTimeout(function () {
-          $('.fab.button').removeClass('hidden');
-        },1250);
+    .app-bar {
+      position: absolute;
+    }
 
-      })
-    ;
+    .app-fab--absolute {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
 
-    function showSnackbar () {
-        $('.snackbar').addClass('show');
-        setTimeout(function () {
-          $('.snackbar').removeClass('show');
-        }, 3000);
+    .mdc-drawer .mdc-list-item {
+      border-radius: 0 36px 36px 0;
+      margin-left: 0;
+      padding-left: 1em;
+    }
+
+    .mdc-drawer .mdc-list-item--activated {
+      color: rgba(53, 104, 89, 0.87);
+    }
+    .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
+      color: var(--mdc-theme-primary);
+    }
+
+    .mdc-card {
+      margin: 8px;
+    }
+
+    .mdc-card .mdc-card__media {
+      background-image: url('images/card.jpg');
+    }
+
+    .mdc-card .mdc-list-item__graphic {
+      color: var(--mdc-theme-secondary);
+    }
+
+    @media(min-width: 1024px) {
+      .app-fab--absolute {
+        bottom: 2rem;
+        right: 2rem;
       }
-  </script>
+    }
+  </style>
 
 </head>
-<body>
-
-  <div class="ui sidebar">
-    <div class="ui fluid secondary small vertical menu">
-      <div class="title">Sunday Liturgy</div>
-      <div class="subtitle"></div>
-
-      <a class="active item">
-        <div class="ui relaxed grid">
-          <div class="row">
-            <div class="column"><i class="material-icons">home</i></div>
-            <div class="middle aligned column">Home</div>
-          </div>
-        </div>
-      </a>
-      <a class="item">
-        <div class="ui relaxed grid">
-          <div class="row">
-            <div class="column"><i class="material-icons">archive</i></div>
-            <div class="middle aligned column">Archive</div>
-          </div>
-        </div>
-      </a>
-
-      <div class="ui divider"></div>
-
-      <div class="item">
-        <div class="ui relaxed grid">
-          <div class="left floated column">
-            <div class="ui sub header">Labels</div>
-          </div>
-        </div>
-      </div>
-
-      <a class="item">
-        <div class="ui relaxed grid">
-          <div class="row">
-            <div class="column"><i class="material-icons">bookmark</i></div>
-            <div class="middle aligned ten wide column">Year A</div>
-          </div>
-        </div>
-      </a>
-      <a class="item">
-        <div class="ui relaxed grid">
-          <div class="row">
-            <div class="column"><i class="material-icons">bookmark</i></div>
-            <div class="middle aligned ten wide column">Year B</div>
-          </div>
-        </div>
-      </a>
-      <a class="item">
-        <div class="ui relaxed grid">
-          <div class="row">
-            <div class="column"><i class="material-icons">bookmark</i></div>
-            <div class="middle aligned ten wide column">Year C</div>
-          </div>
-        </div>
-      </a>
-
-      <div class="ui divider"></div>
-
-      <a class="item">
-        <div class="ui relaxed grid">
-          <div class="row">
-            <div class="column"><i class="material-icons">settings</i></div>
-            <div class="middle aligned ten wide column">Settings</div>
-          </div>
-        </div>
-      </a>
-      <a class="item">
-        <div class="ui relaxed grid">
-          <div class="row">
-            <div class="column"><i class="material-icons">help</i></div>
-            <div class="middle aligned ten wide column">Help & Feedback</div>
-          </div>
-        </div>
-      </a>
-
-    </div>
-  </div>
-
+<body class="mdc-typography">
   
-  <div class="pusher">
-    
-    <div class="ui borderless inverted fixed main menu">
-      <div class="ui text container">
-        <div class="link toc item">
-            <i class="material-icons">menu</i>
-        </div>
-        <div class="header item">
-          Sunday PPT
-        </div>
-        <div class="right menu">
-          <div class="link item">
-            <i class="material-icons">search</i>
-          </div>
-        </div>
-      </div>
+  <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__header">
+      <h3 class="mdc-drawer__title">Sunday Liturgy</h3>
+      <h6 class="mdc-drawer__subtitle"></h6>
     </div>
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
 
-    <div class="ui main grid">
-      <div class="column">
-        <div class="ui stackable cards">
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+          <span class="mdc-list-item__text">Home</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">archive</i>
+          <span class="mdc-list-item__text">Archive</span>
+        </a>
+  
+        <hr class="mdc-list-divider">
+        <h6 class="mdc-list-group__subheader">LABELS</h6>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+          <span class="mdc-list-item__text">Year A</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+          <span class="mdc-list-item__text">Year B</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
+          <span class="mdc-list-item__text">Year C</span>
+        </a>
 
-          <div class="ui fluid centered card">
-            <div class="content">
-              <div class="header">Forthcoming</div>
-              <div class="meta">10 February, 2019</div>
-              <div class="description">
-                5<sup>th</sup> Sunday in Ordinary Time
-              </div>
-            </div>
-            <div class="extra content">
-              <span class="right floated">
-                <button class="ui disabled button"
-                  onclick="window.location.href='pdf/fourth-sunday-ot.pdf'">
-                  DOWNLOAD
+        <hr class="mdc-list-divider">
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
+          <span class="mdc-list-item__text">Settings</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
+          <span class="mdc-list-item__text">Help & Feeback</span>
+        </a>
+
+      </nav>
+    </div>
+  </aside>
+
+  <div class="mdc-drawer-scrim"></div>
+
+  <div class="mdc-drawer-app-content">
+    <header class="mdc-top-app-bar mdc-top-app-bar--short app-bar mdc-elevation--z4" id="app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-info_outlinet">
+          <a class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
+          <span class="mdc-top-app-bar__title">Home</span>
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <a class="material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+        </section>
+      </div>
+    </header>
+
+    <main class="main-content" id="main-content">
+      <div class="mdc-top-app-bar--fixed-adjust">
+
+        <div class="mdc-card mdc-elevation--z2">
+          <div class="mdc-card__media mdc-card__media--16-9">
+           
+          </div>
+          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive">
+            <li class="mdc-list-item" tabindex="0">
+              <span class="mdc-list-item__text">
+                <span class="mdc-list-item__primary-text">5<sup>th</sup> Sunday in Ordinary Time</span>
+                <span class="mdc-list-item__secondary-text">10 February, 2019</span>
+              </span>
+              <span class="mdc-list-item__meta">
+                <button class="mdc-button mdc-button--raised" onclick=download()>
+                  <span class="mdc-button__label material-icons">save_alt</span>
                 </button>
               </span>
-            </div>
-          </div>
+            </li>
+          </ul>
+        </div>
 
-          <div class="ui fluid centered card">
-            <div class="content">
-              <div class="header">Contents</div>
-            </div>
-            <div class="content">
-              <div class="ui three column grid">
-                <div class="column">Entrance</div>
-                <div class="column">-</div>
-                <div class="column">-</div>
-                <div class="column">Offeratory</div>
-                <div class="column">-</div>
-                <div class="column">-</div>
-                <div class="column">Communion</div>
-                <div class="column">-</div>
-                <div class="column">-</div>
-                <div class="column">Post Communion</div>
-                <div class="column">-</div>
-                <div class="column">-</div>
-                <div class="column">Recessional</div>
-                <div class="column">-</div>
-                <div class="column">-</div>
-              </div>
-            </div>
+        <div class="mdc-card mdc-elevation--z2">
+           
+          <div class="mdc-list-group">
+            <h3 class="mdc-list-group__subheader">Contents</h3>
+            <ul class="mdc-list mdc-list--two-line">
+
+              <li class="mdc-list-item">
+                <div class="mdc-list-item__graphic">
+                  <i class="material-icons">info_outline</i>
+                </div>
+                <div class="mdc-list-item__text">
+                  <div class="mdc-list-item__primary-text">Called to walk</div>
+                  <div class="mdc-list-item__secondary-text">Entrance</div>
+                </div>
+                <div class="mdc-list-item__meta">4</div>
+              </li>
+              <li class="mdc-list-item">
+                <div class="mdc-list-item__graphic">
+                  <i class="material-icons">info_outline</i>
+                </div>
+                <div class="mdc-list-item__text">
+                  <div class="mdc-list-item__primary-text">Take our bread</div>
+                  <div class="mdc-list-item__secondary-text">Offeratory</div>
+                </div>
+                <div class="mdc-list-item__meta">139</div>
+              </li>
+              <li class="mdc-list-item">
+                <div class="mdc-list-item__graphic">
+                  <i class="material-icons">info_outline</i>
+                </div>
+                <div class="mdc-list-item__text">
+                  <div class="mdc-list-item__primary-text">Here I am Lord</div>
+                  <div class="mdc-list-item__secondary-text">Communion</div>
+                </div>
+                <div class="mdc-list-item__meta">408</div>
+              </li>
+              <li class="mdc-list-item">
+                <div class="mdc-list-item__graphic">
+                  <i class="material-icons">info_outline</i>
+                </div>
+                <div class="mdc-list-item__text">
+                  <div class="mdc-list-item__primary-text">Make me a servant</div>
+                  <div class="mdc-list-item__secondary-text">Post Communion</div>
+                </div>
+                <div class="mdc-list-item__meta">403</div>
+              </li>
+              <li class="mdc-list-item">
+                <div class="mdc-list-item__graphic">
+                  <i class="material-icons">info_outline</i>
+                </div>
+                <div class="mdc-list-item__text">
+                  <div class="mdc-list-item__primary-text">Follow me, follow me</div>
+                  <div class="mdc-list-item__secondary-text">Recessional</div>
+                </div>
+                <div class="mdc-list-item__meta">208</div>
+              </li>
+
+            </ul>
           </div>
-       
+        </div>
+        
+      </div>
+
+      <div class="mdc-snackbar">
+        <div class="mdc-snackbar__surface">
+          <div class="mdc-snackbar__label"
+                role="status"
+                aria-live="polite">
+            Servers are offline. Try again later.
+          </div>
         </div>
       </div>
 
-    </div>
-
-    <div class="ui inverted snackbar segment">
-      Nothing to look here !
-    </div>
-    
-    <button class="ui huge circular green fab icon button hidden" onclick=showSnackbar()>
-      <i class="material-icons">add</i>
-    </button>
-
+    </main>
   </div>
 
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script src="javascript/material.js"></script>
 </body>
-
 </html>
