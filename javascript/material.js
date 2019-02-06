@@ -29,7 +29,7 @@ $(document)
 
     window.addEventListener('beforeinstallprompt', event => {
       deferredPrompt = event;
-      a2hs.style.display = 'block';
+      a2hs.style.display = 'flex';
     });
 
     a2hs.addEventListener('click', event => {
