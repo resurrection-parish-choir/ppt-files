@@ -23,10 +23,25 @@ $(document)
       }, 2000);
     }
 
+    let deferredPrompt;
+    const a2hs = document.querySelector('#a2hs');
+    a2hs.style.display = 'none';
+
     window.addEventListener('beforeinstallprompt', event => {
-      console.log('event', event);
+      deferredPrompt = event;
+      a2hs.style.display = 'block';
+    });
+
+    a2hs.addEventListener('click', event => {
+      a2hs.style.display = 'none';
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice
+        .then(choiceResult => {
+          deferredPrompt = null;
+        });
     })
-  
+
+
     const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
     const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
     topAppBar.setScrollTarget(document.getElementById('main-content'));

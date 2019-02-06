@@ -1,6 +1,6 @@
-var CACHE_NAME = 'site-cache-v1';
+var CACHE_NAME = 'site-cache-v2';
 var urlsToCache = [
-  '/'
+  'index.html'
 ];
 
 self.addEventListener('install', event => {
@@ -8,6 +8,20 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME)
       .then(cache => {
         return cache.addAll(urlsToCache);
+      })
+  );
+});
+
+self.addEventListener('activate', event => {
+  const cacheWhitelist = [CACHE_NAME];
+  event.waitUntil(
+    caches.keys()
+      .then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            return caches.delete(CACHE_NAME);
+          })
+        );
       })
   );
 });
