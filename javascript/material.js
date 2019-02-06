@@ -5,7 +5,7 @@ const MDCSnackbar = mdc.snackbar.MDCSnackbar;
 
 $(document)
   .ready(function () {
-
+    
     const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
 
     var iOS = false;
@@ -35,16 +35,11 @@ $(document)
       drawer.open = false;
     });
 
-    const selector = '.mdc-button, .mdc-list-item, mdc-card__primary-action';
+    const selector = '.mdc-button, .mdc-list-item';
     const ripples = [].map.call(document.querySelectorAll(selector), function (element) {
       return new MDCRipple(element);
     })
 
-    const iconButtonRipple = new MDCRipple(document.querySelector('.mdc-icon-button'));
-    iconButtonRipple.unbounded = true;
-    
-    const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
-    
   })
 ;
 

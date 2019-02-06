@@ -1,0 +1,16 @@
+{
+  "short_name": "Sunday PPT",
+  "name": "Resurrection Parish Choir",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "type": "image/png",
+      "size": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "scope": "/",
+  "background_color": "#2B4C3F",
+  "theme_color": "#2B4C3F"
+}
