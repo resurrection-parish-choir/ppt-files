@@ -1,7 +1,6 @@
 var CACHE_NAME = 'site-cache-v1';
 var urlsToCache = [
-  '/',
-  'javascript/material.js'
+  '/'
 ];
 
 self.addEventListener('install', event => {
