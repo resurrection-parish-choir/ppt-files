@@ -1,4 +1,4 @@
-var CACHE_NAME = 'site-cache-v2';
+var CACHE_NAME = 'site-cache-v7';
 var urlsToCache = [
   'index.html'
 ];
@@ -19,7 +19,9 @@ self.addEventListener('activate', event => {
       .then(cacheNames => {
         return Promise.all(
           cacheNames.map(cacheName => {
-            return caches.delete(CACHE_NAME);
+            if (cacheWhitelist.indexOf(cacheName) === -1) {
+              return caches.delete(cacheName);
+            }
           })
         );
       })
