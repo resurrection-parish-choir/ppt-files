@@ -23,83 +23,8 @@
 
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
+  <link rel="stylesheet" href="stylesheets/index.css">
   <script src="javascript/index.js"></script>
-
-  <style>
-    :root {
-      --mdc-theme-primary: #356859;
-      --mdc-theme-background: #FFFBE6;
-      --mdc-theme-secondary: #37966F;
-    }
-
-    .mdc-card .mdc-list-item__text,
-    .mdc-top-app-bar .mdc-top-app-bar__title {
-      font-family: 'Raleway', sans-serif;
-    }
-  
-    body {
-      margin: 0;
-      display: flex;
-      height: 100vh;
-      background-color: #FFFBE6; 
-    }
-    .mdc-drawer-app-content {
-      flex: auto;
-      overflow: auto;
-      position: relative;
-    }
-
-    .main-content {
-      overflow: auto;
-      height: 100%;
-    }
-
-    .app-bar {
-      position: absolute;
-    }
-
-    .app-fab--absolute {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-    }
-
-    .mdc-drawer .mdc-list-item {
-      border-radius: 0 36px 36px 0;
-      margin-left: 0;
-      padding-left: 1em;
-    }
-
-    .mdc-drawer .mdc-list-item--activated {
-      color: rgba(53, 104, 89, 0.87);
-    }
-    .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
-      color: var(--mdc-theme-primary);
-    }
-
-    .mdc-card {
-      margin: 8px;
-    }
-
-    .mdc-card .mdc-card__media {
-      background-image: url('images/card.jpg');
-    }
-
-    .mdc-card .mdc-list-item__graphic {
-      color: var(--mdc-theme-secondary);
-    }
-
-    @media(min-width: 1024px) {
-      .app-fab--absolute {
-        bottom: 2rem;
-        right: 2rem;
-      }
-      .mdc-card {
-        margin-left: 25%;
-        margin-right: 25%;
-      }
-    }
-  </style>
 
 </head>
 <body class="mdc-typography">
@@ -158,14 +83,14 @@
   <div class="mdc-drawer-scrim"></div>
 
   <div class="mdc-drawer-app-content">
-    <header class="mdc-top-app-bar mdc-top-app-bar--short app-bar mdc-elevation--z4" id="app-bar">
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed app-bar mdc-elevation--z4" id="app-bar">
       <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-info_outlinet">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
           <a class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
           <span class="mdc-top-app-bar__title">Home</span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-          <a class="material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
+          <a class="search material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
         </section>
       </div>
     </header>
@@ -184,7 +109,7 @@
                 <span class="mdc-list-item__secondary-text">10 February, 2019</span>
               </span>
               <span class="mdc-list-item__meta">
-                <button class="mdc-button mdc-button--raised" onclick=download()>
+                <button class="download mdc-button mdc-button--raised">
                   <span class="mdc-button__label material-icons">save_alt</span>
                 </button>
               </span>
@@ -260,7 +185,10 @@
           <div class="mdc-snackbar__label"
                 role="status"
                 aria-live="polite">
-            Servers are offline. Try again later.
+            An error occured. Try again later.
+          </div>
+          <div class="mdc-snackbar__actions">
+            <button class="material-icons mdc-icon-button mdc-snackbar__dismiss">close</button>
           </div>
         </div>
       </div>

@@ -43,6 +43,30 @@ material.home.ready = () => {
       const ripples = [].map.call($(rippleSelector), element => {
         return new MDCRipple(element);
       });
+
+      $('.download.mdc-button')
+        .on('click', event => {
+          var iOS = false;
+          var platform = window.navigator.platform;
+          if (  platform === 'iPhone' || 
+                platform === 'iPad' || 
+                platform === 'iPod' ) {
+            iOS = true;
+          }
+          if (iOS) {
+            $(this).attr('disabled', 'true');
+            snackbar.open();
+            return;
+          }
+          window.location.href = 'pdf/fifth-sunday-ot.pdf';
+        })
+      ;
+
+      $('.mdc-snackbar__dismiss')
+        .on('click', event => {
+          snackbar.close();
+        })
+      ;
     },
     checkInstalled: () => {
       let deferredPrompt;
@@ -69,15 +93,12 @@ material.home.ready = () => {
   };
 
   handler.initialize();
-  handler.attachEvents();
   handler.checkInstalled();
+  handler.attachEvents();
+
 }
 
 // Attach Ready Event
 $(document)
   .ready(material.home.ready)
 ;
-
-function download() {
-  window.location.href = 'pdf/fifth-sunday-ot.pdf';
-}

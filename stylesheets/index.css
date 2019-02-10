@@ -1,0 +1,74 @@
+:root {
+  --mdc-theme-primary: #356859;
+  --mdc-theme-background: #FFFBE6;
+  --mdc-theme-secondary: #37966F;
+}
+
+.mdc-card .mdc-list-item__text,
+.mdc-top-app-bar .mdc-top-app-bar__title,
+.mdc-drawer .mdc-drawer__title {
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  background-color: #FFFBE6; 
+}
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+.app-bar {
+  position: absolute;
+}
+
+.app-fab--absolute {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+
+.mdc-drawer .mdc-list-item {
+  border-radius: 0 36px 36px 0;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+.mdc-drawer .mdc-list-item--activated {
+  color: rgba(53, 104, 89, 0.87);
+}
+.mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
+  color: var(--mdc-theme-primary);
+}
+
+.mdc-card {
+  margin: 8px;
+}
+
+.mdc-card .mdc-card__media {
+  background-image: url('/images/card.jpg');
+}
+
+.mdc-card .mdc-list-item__graphic {
+  color: var(--mdc-theme-secondary);
+}
+
+@media(min-width: 1024px) {
+  .app-fab--absolute {
+    bottom: 2rem;
+    right: 2rem;
+  }
+  .mdc-card {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+}
