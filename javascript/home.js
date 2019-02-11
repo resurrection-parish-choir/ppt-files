@@ -58,7 +58,7 @@ material.home.ready = () => {
             snackbar.open();
             return;
           }
-          window.location.href = 'pdf/fifth-sunday-ot.pdf';
+          window.location.href = 'pdf/sixth-sunday-ot.pdf';
         })
       ;
 
