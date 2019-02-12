@@ -1,0 +1,22 @@
+{
+  "entrance": {
+    "hymn": "Great indeed are you works",
+    "id": 47
+  },
+  "offertory": {
+    "hymn": "Blessed are You, Lord God of all creation",
+    "id": 121
+  },
+  "communion": {
+    "hymn": "Blessed are they",
+    "id": 42
+  },
+  "post-communion": {
+    "hymn": "You are my rock",
+    "id": 297
+  },
+  "recessional": {
+    "hymn": "It's no longer I that liveth",
+    "id": 220
+  }
+}

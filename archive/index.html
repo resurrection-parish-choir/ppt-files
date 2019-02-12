@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <title>Year A | Resurrection Parish Choir</title>
+  <title>Archive | Resurrection Parish Choir</title>
 
   <link rel="manifest" href="/manifest.json">
 
@@ -44,18 +44,19 @@
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
 
-        <a class="mdc-list-item" href="/">
+        <a class="mdc-list-item" data-href="/">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
           <span class="mdc-list-item__text">Home</span>
         </a>
-        <a class="mdc-list-item" >
+        <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" >
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">archive</i>
           <span class="mdc-list-item__text">Archive</span>
         </a>
   
         <hr class="mdc-list-divider">
         <h6 class="mdc-list-group__subheader">LABELS</h6>
-        <a class="mdc-list-item mdc-list-item--activated" aria-selected="true">
+
+        <a class="mdc-list-item">
           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">bookmark</i>
           <span class="mdc-list-item__text">Year A</span>
         </a>
@@ -94,7 +95,7 @@
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
           <a class="material-icons mdc-top-app-bar__navigation-icon">menu</a>
-          <span class="mdc-top-app-bar__title">Year A</span>
+          <span class="mdc-top-app-bar__title">Archive</span>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
           <a class="search material-icons mdc-top-app-bar__action-item" aria-label="Search" alt="Search">search</a>
@@ -104,17 +105,20 @@
 
     <main class="main-content" id="main-content">
       <div class="mdc-top-app-bar--fixed-adjust">
-
-  
-        
+        <ul class="mdc-list mdc-list--two-line">
+          <div class="mdc-card">
+      
+          </div>
+        </ul>
       </div>
-
     </main>
   </div>
 
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+  <script src="/javascript/docs.js"></script>
+  <script src="/javascript/archive.js"></script>
   
 </body>
 </html>
