@@ -1,4 +1,4 @@
-var CACHE_NAME = 'site-cache-v12';
+var CACHE_NAME = 'site-cache-v18';
 var urlsToCache = [
   'index.html'
 ];
@@ -35,7 +35,10 @@ self.addEventListener('fetch', event => {
         if (response) return response;
         return fetch(event.request)
           .then(response => {
-            if (!response || response.status !== 200 || response.type !== 'basic') {
+            if (!response || 
+                response.status !== 200 || 
+                response.type !== 'basic' ||
+                response.headers.get('content-type') === 'application/pdf') {
               return response;
             }
             var responseToCache = response.clone();

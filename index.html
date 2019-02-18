@@ -112,8 +112,8 @@
           <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive">
             <li class="mdc-list-item" tabindex="0">
               <span class="mdc-list-item__text">
-                <span class="mdc-list-item__primary-text">6<sup>th</sup> Sunday in Ordinary Time</span>
-                <span class="mdc-list-item__secondary-text">17 February, 2019</span>
+                <span class="mdc-list-item__primary-text">7<sup>th</sup> Sunday in Ordinary Time</span>
+                <span class="mdc-list-item__secondary-text">24 February, 2019</span>
               </span>
               <span class="mdc-list-item__meta">
                 <button class="download mdc-button mdc-button--raised">
@@ -200,12 +200,45 @@
         </div>
       </div>
 
+      <div class="mdc-dialog"
+          role="alertdialog"
+          aria-modal="true"
+          aria-labelledby="my-dialog-title"
+          aria-describedby="my-dialog-content">
+        <div class="mdc-dialog__container">
+          <div class="mdc-dialog__surface">
+            
+            <h2 class="mdc-dialog__title" id="my-dialog-title">This file is encrypted</h2>
+            
+            <div class="mdc-dialog__content" id="my-dialog-content">
+              Enter password to decrypt the file
+              <div class="mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
+                <input type="password" id="pw" class="mdc-text-field__input" required minlength=8>
+                <div class="mdc-line-ripple"></div>
+              </div>
+              <div class="mdc-text-field-helper-line">
+                <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg"></div>
+              </div>
+            
+            </div>
+            <footer class="mdc-dialog__actions">
+              <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+                <span class="mdc-button__label">Cancel</span>
+              </button>
+              <button type="button" class="mdc-button mdc-dialog__button mdc-button--raised mdc-dialog__button--default" data-mdc-dialog-action="accept">
+                <span class="mdc-button__label">Submit</span>
+              </button>
+            </footer>
+          </div>
+        </div>
+        <div class="mdc-dialog__scrim"></div>
+      </div>
+
     </main>
   </div>
 
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
   <script src="javascript/index.js"></script>
   <script src="/javascript/docs.js"></script>
   <script src="javascript/home.js"></script>

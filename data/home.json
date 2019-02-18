@@ -1,22 +1,22 @@
 {
   "entrance": {
-    "hymn": "Great indeed are you works",
-    "id": 47
+    "hymn": "God of my salvation",
+    "id": 49
   },
   "offertory": {
-    "hymn": "Blessed are You, Lord God of all creation",
-    "id": 121
+    "hymn": "All things are thine, O Lord",
+    "id": 119
   },
   "communion": {
-    "hymn": "Blessed are they",
-    "id": 42
+    "hymn": "Make me a channel of your peace",
+    "id": 194
   },
   "post-communion": {
-    "hymn": "You are my rock",
-    "id": 297
+    "hymn": "Amazing grace",
+    "id": 189
   },
   "recessional": {
-    "hymn": "It's no longer I that liveth",
-    "id": 220
+    "hymn": "I have decided to follow Jesus",
+    "id": 218
   }
 }
