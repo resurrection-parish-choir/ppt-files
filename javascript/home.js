@@ -26,18 +26,6 @@ material.home.ready = function() {
      
       $('.download.mdc-button')
         .on('click', event => {
-          var iOS = false;
-          var platform = window.navigator.platform;
-          if (  platform === 'iPhone' || 
-                platform === 'iPad' || 
-                platform === 'iPod' ) {
-            iOS = true;
-          }
-          if (iOS) {
-            $(this).attr('disabled', 'true');
-            snackbar.open();
-            return;
-          }
           dialog.open();
         })
       ;
