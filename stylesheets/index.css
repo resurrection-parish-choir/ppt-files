@@ -1,6 +1,6 @@
 :root {
   --mdc-theme-primary: #356859;
-  --mdc-theme-background: #FFFBE6;
+  --mdc-theme-background: #37966F;
   --mdc-theme-secondary: #37966F;
 }
 
@@ -14,7 +14,7 @@ body {
   margin: 0;
   display: flex;
   height: 100vh;
-  background-color: #FFFBE6; 
+  background-color: rgba(53, 104, 89, 0.12);
 }
 .mdc-drawer-app-content {
   flex: auto;
@@ -25,16 +25,31 @@ body {
 .main-content {
   overflow: auto;
   height: 100%;
+  margin-top: 8px; 
 }
 
 .app-bar {
   position: absolute;
+  margin: 8px;
+  width: 96vw;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #424242;
+}
+
+.app-bar .material-icons {
+  color: #424242;
 }
 
 .app-fab--absolute {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
+}
+
+.mdc-drawer .mdc-drawer__title {
+  font-weight: 600;
+  color: var(--mdc-theme-primary);
 }
 
 .mdc-drawer .mdc-list-item {
@@ -52,6 +67,7 @@ body {
 
 .mdc-card {
   margin: 8px;
+  border-radius: 16px;
 }
 
 .mdc-card .mdc-card__media {
@@ -60,6 +76,14 @@ body {
 
 .mdc-card .mdc-list-item__graphic {
   color: var(--mdc-theme-secondary);
+}
+
+.mdc-dialog .mdc-dialog__surface {
+  border-radius: 8px;
+}
+
+.mdc-dialog .mdc-button__label {
+  text-transform: capitalize;
 }
 
 @media(min-width: 1024px) {
