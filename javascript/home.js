@@ -1,7 +1,6 @@
 // Material Imports
 const MDCSnackbar = mdc.snackbar.MDCSnackbar;
 const MDCDialog = mdc.dialog.MDCDialog;
-const MDCTextField = mdc.textField.MDCTextField;
 const MDCTextFieldHelperText = mdc.textField.MDCTextFieldHelperText;
 
 material.home = {};
@@ -11,7 +10,7 @@ material.home.ready = function() {
   var
     snackbar = $('.mdc-snackbar'),
     dialog = $('.mdc-dialog'),
-    textField = $('.mdc-text-field'),
+    passwordTextField = $('.password.mdc-text-field'),
     helperText = $('.mdc-text-field-helper-text'),
     handler;
 
@@ -19,7 +18,7 @@ material.home.ready = function() {
     initialize: function() {
       snackbar = new MDCSnackbar(snackbar[0]);
       dialog = new MDCDialog(dialog[0]);
-      textField = new MDCTextField(textField[0]);
+      passwordTextField = new MDCTextField(passwordTextField[0]);
       helperText = new MDCTextFieldHelperText(helperText[0]);
     },
     attachEvents: function() {
@@ -36,8 +35,8 @@ material.home.ready = function() {
           var password = $('#pw').val();
           var hash = CryptoJS.MD5(password, 'secret').toString();
           if (hash !== '8a2c1ee4c9faf18992a59cedd9023349') {
-            textField.valid = false;
-            textField.helperTextContent = 'The password entered in incorrect';
+            passwordTextField.valid = false;
+            passwordTextField.helperTextContent = 'The password entered in incorrect';
             dialog.open();
           } else {
             window.location.href = '/pdf/seventh-sunday-ot.pdf';
