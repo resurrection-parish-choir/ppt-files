@@ -39,7 +39,7 @@ material.home.ready = function() {
             passwordTextField.helperTextContent = 'The password entered in incorrect';
             dialog.open();
           } else {
-            window.location.href = '/pdf/seventh-sunday-ot.pdf';
+            window.location.href = '/pdf/eighth-sunday-ot.pdf';
           }
         }
       })

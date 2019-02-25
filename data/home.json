@@ -1,22 +1,22 @@
 {
   "entrance": {
-    "hymn": "God of my salvation",
-    "id": 49
+    "hymn": "Praise the Lord with music",
+    "id": 67
   },
   "offertory": {
-    "hymn": "All things are thine, O Lord",
-    "id": 119
+    "hymn": "We offer you",
+    "id": 140
   },
   "communion": {
-    "hymn": "Make me a channel of your peace",
-    "id": 194
+    "hymn": "Blest be the Lord",
+    "id": 44
   },
   "post-communion": {
-    "hymn": "Amazing grace",
-    "id": 189
+    "hymn": "O give thanks to the Lord",
+    "id": 63
   },
   "recessional": {
-    "hymn": "I have decided to follow Jesus",
-    "id": 218
+    "hymn": "I thank my God",
+    "id": 415
   }
 }
