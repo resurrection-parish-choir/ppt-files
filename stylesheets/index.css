@@ -1,7 +1,7 @@
 :root {
-  --mdc-theme-primary: #356859;
-  --mdc-theme-background: #37966F;
-  --mdc-theme-secondary: #37966F;
+  --mdc-theme-primary: #5D1049;
+  --mdc-theme-background: #720D5D;
+  --mdc-theme-secondary: #720D5D;
   --mdc-theme-on-primary: rgba(0, 0, 0, 0.38);
 }
 
@@ -16,7 +16,7 @@ body {
   margin: 0;
   display: flex;
   height: 100vh;
-  background-color: rgba(53, 104, 89, 0.12);
+  background-color: #5D10491E;
 }
 .mdc-drawer-app-content {
   flex: auto;
@@ -71,7 +71,7 @@ body {
 }
 
 .mdc-drawer .mdc-list-item--activated {
-  color: rgba(53, 104, 89, 0.87);
+  color: #5D1049DD;
 }
 .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
   color: var(--mdc-theme-primary);

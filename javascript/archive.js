@@ -1,3 +1,4 @@
+'use strict';
 // Material Imports
 
 material.archive = {};
@@ -12,17 +13,19 @@ material.archive.ready = function() {
 
     },
 
-    createListItem: function(date, title, link) {
-      var element = $('<li>').addClass('mdc-list-item');
-      var text = $('<div>').addClass('mdc-list-item__text');
-      var primaryText = $('<div>').addClass('mdc-list-item__primary-text').text(title);
-      var secondaryText = $('<div>').addClass('mdc-list-item__secondary-text').text(date);
+    createListItem: function(item) {
+      var
+        element = $('<li>').addClass('mdc-list-item'),
+        text = $('<span>').addClass('mdc-list-item__text'),
+        primaryText = $('<span>').addClass('mdc-list-item__primary-text').text(item.title),
+        secondaryText = $('<span>').addClass('mdc-list-item__secondary-text').text(item.date);
+
       text.append(primaryText);
       text.append(secondaryText);
 
       element
         .on('click', event => {
-          window.location.href = link;
+          window.location.href = item.link;
         })
       ;
 
@@ -36,9 +39,9 @@ material.archive.ready = function() {
           if (response.status === 200) {
             response.json()
               .then(data => {
-                data.forEach(element => {
+                data.forEach(item => {
                   $('#main-content .mdc-card')
-                    .append(handler.createListItem(element.date, element.title, element.link))
+                    .append(handler.createListItem(item))
                   ;
                 });
               })

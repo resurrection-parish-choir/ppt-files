@@ -1,3 +1,4 @@
+'use strict';
 // Material Imports
 const MDCDrawer = mdc.drawer.MDCDrawer;
 const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;

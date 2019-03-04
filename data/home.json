@@ -1,22 +1,62 @@
 {
   "entrance": {
-    "hymn": "Praise the Lord with music",
-    "id": 67
+    "hymn": "Have mercy on me",
+    "id": 50
+  },
+  "imposition-1": {
+    "hymn": "Father forgive them",
+    "id": 270
+  },
+  "imposition-2": {
+    "hymn": "We hail Thee",
+    "id": 266
+  },
+  "imposition-3": {
+    "hymn": "Old rugged cross",
+    "id": 267
+  },
+  "imposition-4": {
+    "hymn": "God of mercy and compassion",
+    "id": 261
+  },
+  "imposition-5": {
+    "hymn": "Into Your hands",
+    "id": 263
+  },
+  "imposition-6": {
+    "hymn": "O cross erected above the world",
+    "id": 267
+  },
+  "imposition-7": {
+    "hymn": "From the depths I call",
+    "id": 268
+  },
+  "imposition-8": {
+    "hymn": "Were you there?",
+    "id": 269
   },
   "offertory": {
-    "hymn": "We offer you",
-    "id": 140
+    "hymn": "Blessed are You",
+    "id": 123
   },
-  "communion": {
-    "hymn": "Blest be the Lord",
-    "id": 44
+  "communion-1": {
+    "hymn": "He was despised",
+    "id": 271
+  },
+  "communion-2": {
+    "hymn": "I surrender all",
+    "id": 393
+  },
+  "communion-3": {
+    "hymn": "Though the mountain may fall",
+    "id": 77
   },
   "post-communion": {
-    "hymn": "O give thanks to the Lord",
-    "id": 63
+    "hymn": "Come back to me",
+    "id": 394
   },
   "recessional": {
-    "hymn": "I thank my God",
-    "id": 415
+    "hymn": "What a friend we have in Jesus",
+    "id": 300
   }
 }

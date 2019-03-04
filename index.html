@@ -133,12 +133,12 @@
           <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive">
             <li class="mdc-list-item" tabindex="0">
               <span class="mdc-list-item__text">
-                <span class="mdc-list-item__primary-text">8<sup>th</sup> Sunday in Ordinary Time</span>
-                <span class="mdc-list-item__secondary-text">03 March, 2019</span>
+                <span class="mdc-list-item__primary-text">Ash Wednesday</span>
+                <span class="mdc-list-item__secondary-text">06 March, 2019</span>
               </span>
               <span class="mdc-list-item__meta">
                 <button class="download mdc-button mdc-button--outlined">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="#356859" d="M13 5v6h1.17L12 13.17 9.83 11H11V5h2m2-2H9v6H5l7 7 7-7h-4V3zm4 15H5v2h14v-2z"/></svg>
+                  <i class="material-icons">save_alt</i>
                 </button>
               </span>
             </li>
@@ -149,58 +149,7 @@
            
           <div class="mdc-list-group">
             <h3 class="mdc-list-group__subheader">Contents</h3>
-            <ul class="mdc-list mdc-list--two-line">
-
-              <li class="mdc-list-item" id="entrance">
-                <span class="mdc-list-item__graphic">
-                  <i class="material-icons">info_outline</i>
-                </span>
-                <span class="mdc-list-item__text">
-                  <span class="mdc-list-item__primary-text"></span>
-                  <span class="mdc-list-item__secondary-text">Entrance</span>
-                </span>
-                <span class="mdc-list-item__meta"></span>
-              </li>
-              <li class="mdc-list-item" id="offertory">
-                <span class="mdc-list-item__graphic">
-                  <i class="material-icons">info_outline</i>
-                </span>
-                <span class="mdc-list-item__text">
-                  <span class="mdc-list-item__primary-text"></span>
-                  <span class="mdc-list-item__secondary-text">Offertory</span>
-                </span>
-                <span class="mdc-list-item__meta"></span>
-              </li>
-              <li class="mdc-list-item" id="communion">
-                <span class="mdc-list-item__graphic">
-                  <i class="material-icons">info_outline</i>
-                </span>
-                <span class="mdc-list-item__text">
-                  <span class="mdc-list-item__primary-text"></span>
-                  <span class="mdc-list-item__secondary-text">Communion</span>
-                </span>
-                <span class="mdc-list-item__meta"></span>
-              </li>
-              <li class="mdc-list-item" id="post-communion">
-                <span class="mdc-list-item__graphic">
-                  <i class="material-icons">info_outline</i>
-                </span>
-                <span class="mdc-list-item__text">
-                  <span class="mdc-list-item__primary-text"></span>
-                  <span class="mdc-list-item__secondary-text">Post Communion</span>
-                </span>
-                <span class="mdc-list-item__meta"></span>
-              </li>
-              <li class="mdc-list-item" id="recessional">
-                <span class="mdc-list-item__graphic">
-                  <i class="material-icons">info_outline</i>
-                </span>
-                <span class="mdc-list-item__text">
-                  <span class="mdc-list-item__primary-text"></span>
-                  <span class="mdc-list-item__secondary-text">Recessional</span>
-                </span>
-                <span class="mdc-list-item__meta"></span>
-              </li>
+            <ul class="mdc-list mdc-list--two-line" id="content-list"> 
 
             </ul>
           </div>
@@ -234,7 +183,7 @@
             <div class="mdc-dialog__content" id="my-dialog-content">
               Enter password to decrypt the file
               <div class="password mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
-                <input type="password" id="pw" class="mdc-text-field__input" required minlength=8>
+                <input type="password" id="pw" class="mdc-text-field__input" autocomplete="new-password">
                 <div class="mdc-line-ripple"></div>
               </div>
               <div class="mdc-text-field-helper-line">

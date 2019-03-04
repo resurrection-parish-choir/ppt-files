@@ -1,3 +1,4 @@
+'use strict';
 // Material Imports
 const MDCSnackbar = mdc.snackbar.MDCSnackbar;
 const MDCDialog = mdc.dialog.MDCDialog;
@@ -37,9 +38,10 @@ material.home.ready = function() {
           if (hash !== '8a2c1ee4c9faf18992a59cedd9023349') {
             passwordTextField.valid = false;
             passwordTextField.helperTextContent = 'The password entered in incorrect';
+            $('#pw').val('');
             dialog.open();
           } else {
-            window.location.href = '/pdf/eighth-sunday-ot.pdf';
+            window.location.href = '/pdf/ash-wednesday.pdf';
           }
         }
       })
@@ -51,25 +53,38 @@ material.home.ready = function() {
       ;
 
     },
+   
+    createList: function(key, value) {
+      var
+        title = key.charAt(0).toUpperCase() + key.slice(1).replace('-', ' '),
+        element = $('<li>').addClass('mdc-list-item'),
+        text = $('<span>').addClass('mdc-list-item__text'),
+        graphic = $('<span>').addClass('mdc-list-item__graphic'),
+        meta = $('<span>').addClass('mdc-list-item__meta').text(value["id"]),
+        icon = $('<i>').addClass('material-icons').text('info_outline'),
+        primaryText = $('<span>').addClass('mdc-list-item__primary-text').text(value["hymn"]),
+        secondaryText = $('<span>').addClass('mdc-list-item__secondary-text').text(title);
 
-    makeList: function(key, value) {
-      $('#'+key)
-        .find('.mdc-list-item__primary-text')
-        .text(value.hymn);
-      ;
-      $('#'+key)
-        .find('.mdc-list-item__meta')
-        .text(value.id);
-      ;
+      graphic.append(icon);
+      text.append(primaryText);
+      text.append(secondaryText);
+      element.append(graphic);
+      element.append(text);
+      element.append(meta);
+      MDCRipple.attachTo(element[0]);
+
+      return element;
     },
-
     getList: function() {
       fetch('/data/home.json')
         .then(response => {
           response.json()
             .then(data => {
-              for (var key in data)
-                handler.makeList(key, data[key]);
+              for (let key in data) {
+                $('#content-list')
+                  .append(handler.createList(key, data[key]))
+                ;
+              }
             })
           ;
         })
