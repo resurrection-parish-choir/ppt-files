@@ -41,7 +41,7 @@ material.home.ready = function() {
             $('#pw').val('');
             dialog.open();
           } else {
-            window.location.href = '/pdf/ash-wednesday.pdf';
+            window.location.href = '/pdf/first-sunday-lent.pdf';
           }
         }
       })
