@@ -31,6 +31,8 @@ material.ready = function() {
       drawer = MDCDrawer.attachTo(drawer[0]);
       topAppBar = MDCTopAppBar.attachTo(topAppBar[0]);
       searchTextField = new MDCTextField(searchTextField[0]);
+
+      search.disabled = true;
     },
     attachEvents: function() {
       topAppBar.setScrollTarget(mainContent[0]);

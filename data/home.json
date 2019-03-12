@@ -1,26 +1,22 @@
 {
   "entrance": {
-    "hymn": "On we go to Jerusalem",
-    "id": 25
+    "hymn": "It is Your face Lord that I seek",
+    "id": 58
   },
   "offertory": {
-    "hymn": "In bread we bring you Lord",
-    "id": 128
+    "hymn": "Lord accept this bread and wine",
+    "id": 131
   },
-  "communion-1": {
-    "hymn": "On eagle's wings",
-    "id": "-"
-  },
-  "communion-2": {
-    "hymn": "Come to me all who thirst",
-    "id": 151
+  "communion": {
+    "hymn": "Listen let your heart keep seeking",
+    "id": 59
   },
   "post-communion": {
-    "hymn": "Though the mountains may fall",
-    "id": 77
+    "hymn": "Jesus, You are my salvation",
+    "id": 309
   },
   "recessional": {
-    "hymn": "From the depths I call",
-    "id": 268
+    "hymn": "What a friend we have in Jesus",
+    "id": 300
   }
 }
