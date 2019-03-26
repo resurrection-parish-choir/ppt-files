@@ -1,22 +1,22 @@
 {
   "entrance": {
-    "hymn": "Come let us go to the moutain of the Lord",
-    "id": 8
+    "hymn": "I rejoiced when I heard",
+    "id": 17
   },
   "offertory": {
-    "hymn": "On the paten",
-    "id": 125
+    "hymn": "On this day of joy",
+    "id": 137
   },
   "communion": {
-    "hymn": "Have mercy on me",
-    "id": 50
+    "hymn": "Taste and see",
+    "id": 70
   },
   "post-communion": {
-    "hymn": "Here I am, Lord",
-    "id": 408
+    "hymn": "Come back to me",
+    "id": 394
   },
   "recessional": {
-    "hymn": "God of mercy and compassion",
-    "id": 261
+    "hymn": "Father forgive them",
+    "id": 270
   }
 }
