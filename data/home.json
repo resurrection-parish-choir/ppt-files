@@ -1,22 +1,22 @@
 {
   "entrance": {
-    "hymn": "I rejoiced when I heard",
-    "id": 17
+    "hymn": "I'll turn my steps",
+    "id": 21
   },
   "offertory": {
-    "hymn": "On this day of joy",
-    "id": 137
+    "hymn": "Take our bread",
+    "id": 139
   },
   "communion": {
-    "hymn": "Taste and see",
-    "id": 70
+    "hymn": "Hosea",
+    "id": 395
   },
   "post-communion": {
-    "hymn": "Come back to me",
-    "id": 394
+    "hymn": "Make me a servant",
+    "id": 403
   },
   "recessional": {
-    "hymn": "Father forgive them",
-    "id": 270
+    "hymn": "All to Jesus I surrender",
+    "id": 393
   }
 }
