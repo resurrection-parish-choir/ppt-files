@@ -1,22 +1,22 @@
 {
   "entrance": {
-    "hymn": "I'll turn my steps",
-    "id": 21
+    "hymn": "The king of glory comes",
+    "id": 246
   },
   "offertory": {
-    "hymn": "Take our bread",
-    "id": 139
+    "hymn": "Father take the gifts",
+    "id": 126
   },
   "communion": {
-    "hymn": "Hosea",
-    "id": 395
+    "hymn": "Deep calls to deep",
+    "id": 182
   },
   "post-communion": {
-    "hymn": "Make me a servant",
-    "id": 403
+    "hymn": "Jesus song",
+    "id": 299
   },
   "recessional": {
-    "hymn": "All to Jesus I surrender",
-    "id": 393
+    "hymn": "Many hearts will be broken",
+    "id": 315
   }
 }

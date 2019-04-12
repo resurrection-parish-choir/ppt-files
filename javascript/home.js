@@ -41,7 +41,7 @@ material.home.ready = function() {
             $('#pw').val('');
             dialog.open();
           } else {
-            window.location.href = '/pdf/fifth-sunday-lent.pdf';
+            window.location.href = '/pdf/palm-sunday.pdf';
           }
         }
       })
