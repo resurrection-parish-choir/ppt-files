@@ -29,9 +29,7 @@ material.music.ready = function() {
 
     attachEvents: function() {
       list.singleSelection = true;
-      slider.listen('MDCSlider:change', () => {
-      });
-
+      
       $('.mdc-fab')
         .on('click', event => {
           if (player.getPlayerState() == YT.PlayerState.PLAYING ||
@@ -160,6 +158,13 @@ material.music.onPlayerStateChange = function(event) {
 
   handler = {
 
+    attachEvents: function() {
+      slider.listen('MDCSlider:input', () => {
+        clearTimeout(playerTicks);
+        player.seekTo(handler.setCurrentProgress());
+      });
+    },
+
     handleChange: function() {
       if (event.data == YT.PlayerState.ENDED) {
         $('.mdc-fab__icon').text('replay');
@@ -185,6 +190,12 @@ material.music.onPlayerStateChange = function(event) {
       var playerCurrentTime = player.getCurrentTime();
       return (playerCurrentTime/playerTotalDuration)*100;
     },
+
+    setCurrentProgress: function() {
+      var playerTotalDuration = player.getDuration();
+      return (slider.value*playerTotalDuration)/100;
+    },
+
     secondsToClock: function(duration) {
       var rawTime = Math.floor(duration);
       var min = Math.floor(rawTime % 3600 / 60);
@@ -196,6 +207,7 @@ material.music.onPlayerStateChange = function(event) {
     }
   }
   handler.handleChange();
+  handler.attachEvents();
 }
 
 // Attach Ready Event
