@@ -24,7 +24,7 @@ material.ready = function() {
     searchOpen = false,
     handler;
 
-  const rippleSelector = '.mdc-button, .mdc-list-item';
+  const rippleSelector = '.mdc-button, .mdc-list-item, .mdc-fab';
 
   handler = {
     initialize: function() {

@@ -9,9 +9,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-  <title>Files | Resurrection Parish Choir</title>
+  <title>Music | Resurrection Parish Choir</title>
 
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
 
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -23,7 +23,7 @@
 
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
-  <link rel="stylesheet" href="stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/index.css">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -34,9 +34,47 @@
   <!-- End Google Tag Manager -->
 
   <style>
-    .mdc-top-app-bar--fixed-adjust > .mdc-card {
+    h2, h3 {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+
+    .bottom.mdc-card {
+      position: fixed;
+      width: 100vw;
+      margin: 0;
+      bottom: 0;
+      padding: 16px;
+      border-radius: 16px 16px 0px 0px ;
+    }
+    
+    .material-icons.md-48 {
+      font-size: 48px;
+    }
+
+    .app-fab--absolute {
+      position: fixed;
+      z-index: 3;
+      bottom: 6.5rem;
+      right: 1.5rem;
+    }
+
+    .mdc-tab-bar {
       margin-top: 16px;
     }
+
+    .mdc-tab__ripple {
+      clip-path: circle(30% at 50% 50%);
+    }
+
+    .mdc-card--outlined {
+      margin-bottom: 134px;
+    }
+    
   </style>
 
 </head>
@@ -51,8 +89,8 @@
     <div class="mdc-drawer__content">
       <nav class="mdc-list">
 
-        <a class="mdc-list-item mdc-list-item--activated" aria-selected="true">
-          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">
+        <a class="mdc-list-item" data-href="/">
+          <i class="mdc-list-item__graphic" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
           </i>
           <span class="mdc-list-item__text">Home</span>
@@ -63,7 +101,7 @@
           </i>
           <span class="mdc-list-item__text">Archive</span>
         </a>
-        <a class="mdc-list-item" data-href="/music">
+        <a class="mdc-list-item mdc-list-item--activated" aria-selected="true" >
           <i class="mdc-list-item__graphic" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zm-7.5-1c1.38 0 2.5-1.12 2.5-2.5V7h3V5h-4v5.51c-.42-.32-.93-.51-1.5-.51-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6z"/></svg>
           </i>
@@ -72,7 +110,8 @@
   
         <hr class="mdc-list-divider">
         <h6 class="mdc-list-group__subheader">LABELS</h6>
-        <a class="mdc-list-item" >
+
+        <a class="mdc-list-item">
           <i class="mdc-list-item__graphic" aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"/></svg>
           </i>
@@ -115,12 +154,12 @@
   <div class="mdc-drawer-scrim"></div>
 
   <div class="mdc-drawer-app-content">
-    <header class="mdc-top-app-bar mdc-elevation--z2" id="app-bar">
+    <header class="mdc-top-app-bar app-bar mdc-elevation--z2" id="app-bar">
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
           <a class="nav-icon material-icons mdc-top-app-bar__navigation-icon">menu</a>
           <div class="search mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
-            <input type="text" class="mdc-text-field__input" placeholder="Home">
+            <input type="text" class="mdc-text-field__input" placeholder="Music">
           </div>
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -131,92 +170,59 @@
 
     <main class="main-content" id="main-content">
       <div class="mdc-top-app-bar--fixed-adjust">
-
-        <div class="mdc-card mdc-card--outlined">
-          <div class="mdc-card__media mdc-card__media--16-9">
-           
-          </div>
-          <ul class="mdc-list mdc-list--two-line mdc-list--non-interactive">
-            <li class="mdc-list-item" tabindex="0">
-              <span class="mdc-list-item__text">
-                <span class="mdc-list-item__primary-text">Palm Sunday</span>
-                <span class="mdc-list-item__secondary-text">14 April, 2019</span>
-              </span>
-              <span class="mdc-list-item__meta">
-                <button class="download mdc-button mdc-button--outlined">
-                  <i class="material-icons">save_alt</i>
-                </button>
-              </span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="mdc-card mdc-card--outlined">
-           
-          <div class="mdc-list-group">
-            <h3 class="mdc-list-group__subheader">Contents</h3>
-            <ul class="mdc-list mdc-list--two-line" id="content-list"> 
-
-            </ul>
-          </div>
-        </div>
-        
-      </div>
-
-      <div class="mdc-snackbar">
-        <div class="mdc-snackbar__surface">
-          <div class="mdc-snackbar__label"
-                role="status"
-                aria-live="polite">
-            An error occured. Try again later.
-          </div>
-          <div class="mdc-snackbar__actions">
-            <button class="material-icons mdc-icon-button mdc-snackbar__dismiss">close</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="mdc-dialog"
-          role="alertdialog"
-          aria-modal="true"
-          aria-labelledby="my-dialog-title"
-          aria-describedby="my-dialog-content">
-        <div class="mdc-dialog__container">
-          <div class="mdc-dialog__surface">
-            
-            <h2 class="mdc-dialog__title" id="my-dialog-title">This file is encrypted</h2>
-            
-            <div class="mdc-dialog__content" id="my-dialog-content">
-              Enter password to decrypt the file
-              <div class="password mdc-text-field mdc-text-field--fullwidth mdc-text-field--no-label">
-                <input type="password" id="pw" class="mdc-text-field__input" autocomplete="new-password">
-                <div class="mdc-line-ripple"></div>
+        <div id="player"></div>
+        <div class="mdc-tab-bar" role="tablist">
+          <div class="mdc-tab-scroller">
+            <div class="mdc-tab-scroller__scroll-area">
+              <div class="mdc-tab-scroller__scroll-content">
+                
               </div>
-              <div class="mdc-text-field-helper-line">
-                <div class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg"></div>
-              </div>
-            
             </div>
-            <footer class="mdc-dialog__actions">
-              <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
-                <span class="mdc-button__label">Cancel</span>
-              </button>
-              <button type="button" class="mdc-button mdc-dialog__button mdc-dialog__button--default" data-mdc-dialog-action="accept">
-                <span class="mdc-button__label">Submit</span>
-              </button>
-            </footer>
           </div>
         </div>
-        <div class="mdc-dialog__scrim"></div>
+
+        <ul class="mdc-list mdc-list--two-line">
+          <div class="mdc-card mdc-card--outlined">
+      
+          </div>
+        </ul>
       </div>
 
+      <button class="mdc-fab app-fab--absolute" aria-label="Play">
+        <span class="mdc-fab__icon material-icons">play_arrow</span>
+      </button>
+
+      <div class="bottom mdc-card mdc-elevation--z6">
+
+        <div class="demo-card__primary">
+          <h2 class="demo-card__title mdc-typography mdc-typography--headline6">10,000 Reasons (Bless the Lord)</h2>
+          <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">
+            <span id="track-elapsed">00:00</span> / 
+            <span id="track-total">00:00</span>
+          </h3>
+        </div>
+
+        <div class="mdc-slider" tabindex="0" role="slider"
+          aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+          aria-label="Select Value">
+          <div class="mdc-slider__track-container">
+            <div class="mdc-slider__track"></div>
+          </div>
+          <div class="mdc-slider__thumb-container">
+            <svg class="mdc-slider__thumb" width="21" height="21">
+              <circle cx="10.5" cy="10.5" r="7.875"></circle>
+            </svg>
+            <div class="mdc-slider__focus-ring"></div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
-  <script src="javascript/index.js"></script>
+  <script src="/javascript/youtube.js"></script>
   <script src="/javascript/docs.js"></script>
-  <script src="javascript/home.js"></script>
+  <script src="/javascript/music.js"></script>
+  
 </body>
 </html>
