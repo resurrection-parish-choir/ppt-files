@@ -41,7 +41,7 @@ material.home.ready = function() {
             $('#pw').val('');
             dialog.open();
           } else {
-            window.location.href = '/pdf/palm-sunday.pdf';
+            window.location.href = '/pdf/divine-mercy-sunday.pdf';
           }
         }
       })
