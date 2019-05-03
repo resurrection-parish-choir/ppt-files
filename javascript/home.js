@@ -41,7 +41,7 @@ material.home.ready = function() {
             $('#pw').val('');
             dialog.open();
           } else {
-            window.location.href = '/pdf/confirmation.pdf';
+            window.location.href = '/pdf/third-sunday-easter.pdf';
           }
         }
       })

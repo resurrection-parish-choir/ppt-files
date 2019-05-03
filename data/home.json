@@ -1,42 +1,26 @@
 {
   "entrance": {
-    "hymn": "As we gather",
-    "id": 3
-  },
-  "gloria": {
-    "hymn": "Mass of Christ the Savior",
-    "id": "-"
+    "hymn": "Come on and celebrate",
+    "id": 1
   },
   "offertory": {
-    "hymn": "Blest are You Lord",
-    "id": 123
-  },
-  "holy": {
-    "hymn": "Mass of St. Ann",
-    "id": "-"
-  },
-  "lamb-of-god": {
-    "hymn": "Mass of St. Ann",
-    "id": "-"
+    "hymn": "Blessed are You Lord",
+    "id": 120
   },
   "communion": {
-    "hymn": "As the deer panteth",
-    "id": "-"
+    "hymn": "Be exalted",
+    "id": 40
   },
   "communion-2": {
-    "hymn": "Here I am Lord",
-    "id": 408
-  },
-  "communion-3": {
     "hymn": "New life",
     "id": 189
   },
   "post-communion": {
-    "hymn": "Easter song",
-    "id": 276
+    "hymn": "My hearts like a flute",
+    "id": 191
   },
   "recessional": {
-    "hymn": "Your kingdom come today",
-    "id": 322
+    "hymn": "Easter song",
+    "id": 276
   }
 }
