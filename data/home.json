@@ -1,26 +1,22 @@
 {
   "entrance": {
-    "hymn": "Come on and celebrate",
-    "id": 1
+    "hymn": "Sing to the mountains",
+    "id": 28
   },
   "offertory": {
-    "hymn": "Blessed are You Lord",
-    "id": 120
+    "hymn": "Look upon our offering",
+    "id": 130
   },
   "communion": {
-    "hymn": "Be exalted",
-    "id": 40
-  },
-  "communion-2": {
-    "hymn": "New life",
-    "id": 189
+    "hymn": "The Lord is my shepherd",
+    "id": 72
   },
   "post-communion": {
     "hymn": "My hearts like a flute",
     "id": 191
   },
   "recessional": {
-    "hymn": "Easter song",
-    "id": 276
+    "hymn": "Good news",
+    "id": 215
   }
 }
