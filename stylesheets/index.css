@@ -57,6 +57,13 @@ body {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
+  will-change: transform;
+  transform: scale(1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-fab--absolute.hidden {
+  transform: scale(0);
 }
 
 .mdc-drawer .mdc-drawer__title {

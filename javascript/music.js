@@ -35,10 +35,8 @@ material.music.ready = function() {
           if (player.getPlayerState() == YT.PlayerState.PLAYING ||
               player.getPlayerState() == YT.PlayerState.BUFFERING) {
             player.pauseVideo();
-            handler.toggleButton(false);
           } else {
             player.playVideo();
-            handler.toggleButton(true);
           }
         })
       ;
@@ -47,6 +45,7 @@ material.music.ready = function() {
     changeTrack: function(track) {
       songTitle.text(track.title);
       player.cueVideoById(track.code);
+      player.playVideo();
       $('.mdc-fab__icon').text('play_arrow');
     },
 
@@ -137,11 +136,6 @@ material.music.ready = function() {
       ;
     },
 
-    toggleButton: function(isPlaying) {
-      let state = isPlaying ? 'pause' : 'play_arrow';
-      $('.mdc-fab__icon').text(state);
-    }
-
   };
 
   handler.createTabBar();
@@ -171,12 +165,15 @@ material.music.onPlayerStateChange = function(event) {
       } else if (event.data == YT.PlayerState.PAUSED) {
         $('.mdc-fab__icon').text('play_arrow');
       } else if (event.data == YT.PlayerState.PLAYING) {
+        $('.mdc-fab').removeClass('hidden');
+        $('.mdc-fab__icon').text('pause');
         totalTime.text(handler.secondsToClock(player.getDuration()));
         playerTicks = setInterval(function () {
           elapsedTime.text(handler.secondsToClock(player.getCurrentTime()));
           slider.value = handler.getCurrentProgress();
         }, 1000);
       } else if (event.data == YT.PlayerState.CUED) {
+        $('.mdc-fab').addClass('hidden');
         slider.value = 0;
         elapsedTime.text('00:00');
         totalTime.text('00:00');

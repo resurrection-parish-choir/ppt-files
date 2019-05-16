@@ -1,22 +1,22 @@
 {
   "entrance": {
-    "hymn": "Sing to the mountains",
-    "id": 28
+    "hymn": "Yours is the kingdom",
+    "id": 37
   },
   "offertory": {
-    "hymn": "Look upon our offering",
-    "id": 130
+    "hymn": "Take our bread",
+    "id": 139
   },
   "communion": {
-    "hymn": "The Lord is my shepherd",
-    "id": 72
+    "hymn": "A new commandment",
+    "id": 141
   },
   "post-communion": {
-    "hymn": "My hearts like a flute",
-    "id": 191
+    "hymn": "God is dwelling in my heart",
+    "id": 157
   },
   "recessional": {
-    "hymn": "Good news",
-    "id": 215
+    "hymn": "As I kneel",
+    "id": 340
   }
 }
