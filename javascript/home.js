@@ -26,10 +26,12 @@ material.home.ready = function() {
      
       $('.download.mdc-button')
         .on('click', event => {
-          dialog.open();
+          //dialog.open();
+          window.location.href = '/pdf/sixth-sunday-easter.pdf';
         })
       ;
-
+      
+      /*
       dialog.listen('MDCDialog:closed', event => {
         let action = event.detail.action;
         if (action === 'accept') {
@@ -45,6 +47,7 @@ material.home.ready = function() {
           }
         }
       })
+      */
 
       $('.mdc-snackbar__dismiss')
         .on('click', event => {
