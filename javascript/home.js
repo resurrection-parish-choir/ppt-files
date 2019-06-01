@@ -27,7 +27,7 @@ material.home.ready = function() {
       $('.download.mdc-button')
         .on('click', event => {
           //dialog.open();
-          window.location.href = '/pdf/sixth-sunday-easter.pdf';
+          window.location.href = '/pdf/seventh-sunday-easter.pdf';
         })
       ;
       
