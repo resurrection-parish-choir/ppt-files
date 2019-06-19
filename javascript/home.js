@@ -27,7 +27,7 @@ material.home.ready = function() {
       $('.download.mdc-button')
         .on('click', event => {
           //dialog.open();
-          window.location.href = '/pdf/trinity-sunday.pdf';
+          window.location.href = '/pdf/corpus-christi.pdf';
         })
       ;
       
