@@ -116,19 +116,19 @@ material.music.ready = function() {
     getPlaylist: function(letter) {
       fetch(letter+'.json')
         .then(response => {
-          $('#main-content .mdc-card--outlined').empty();
+          $('#main-content .mdc-list').empty();
           if (response.status === 200) {
             response.json()
               .then(data => {
                 data.forEach((item, index) => {
-                  $('#main-content .mdc-card--outlined')
+                  $('#main-content .mdc-list')
                     .append(handler.createPlaylist(item, index))
                   ; 
                 });
               })
             ;
           } else {
-            $('#main-content .mdc-card--outlined')
+            $('#main-content .mdc-list')
               .append(handler.createPlaylist({title: 'No songs found', author: ''}))
             ;
           }

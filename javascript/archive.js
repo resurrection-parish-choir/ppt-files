@@ -1,16 +1,39 @@
 'use strict';
 // Material Imports
+const { MDCSelect } = mdc.select;
 
 material.archive = {};
 
 // Ready Event
 material.archive.ready = function() {
   var
+    yearSelect = $('#year-select'),
+    seasonSelect = $('#season-select'),
+    archiveList = $('#main-content .mdc-list'),
+    selectedYear,
+    selectedSeason,
     handler;
 
   handler = {
-    attachEvents: function() {
+    initialize: function() {
+      yearSelect = new MDCSelect(yearSelect[0]);
+      seasonSelect = new MDCSelect(seasonSelect[0]);
 
+      handler.attachEvents();
+    },
+    attachEvents: function() {
+      yearSelect.listen('MDCSelect:change', event => {
+        selectedYear = yearSelect.value;
+      });
+      seasonSelect.listen('MDCSelect:change', event => {
+        selectedSeason = seasonSelect.value;
+      });
+
+      $('.action-button')
+        .on('click', event => {
+          handler.createList();
+        })
+      ;
     },
 
     createListItem: function(item) {
@@ -34,16 +57,15 @@ material.archive.ready = function() {
     },
 
     createList: function() {
-      fetch('/data/archive.json')
+      fetch(selectedYear+'.json')
         .then(response => {
           if (response.status === 200) {
             response.json()
               .then(data => {
-                data.forEach(item => {
-                  $('#main-content .mdc-card')
-                    .append(handler.createListItem(item))
-                  ;
-                });
+                archiveList.empty();
+                for (let x in data[selectedSeason]) {
+                  archiveList.append(handler.createListItem(data[selectedSeason][x]));
+                }
               })
             ;
           }
@@ -51,8 +73,7 @@ material.archive.ready = function() {
       ;
     }
   };
-  handler.createList();
-  handler.attachEvents();
+  handler.initialize();
 
 }
 

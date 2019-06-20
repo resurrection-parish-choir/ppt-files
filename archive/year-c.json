@@ -1,0 +1,106 @@
+{
+  "advent": [
+    
+  ],
+  "easter": [
+    {
+      "title": "Divine Mercy Sunday",
+      "date": "28 April, 2019",
+      "link": "/pdf/divine-mercy-sunday.pdf"
+    },
+    {
+      "title": "3rd Sunday in Easter",
+      "date": "05 May, 2019",
+      "link": "/pdf/third-sunday-easter.pdf"
+    },
+    {
+      "title": "4th Sunday in Easter",
+      "date": "12 May, 2019",
+      "link": "/pdf/fourth-sunday-easter.pdf"
+    },
+    {
+      "title": "5th Sunday in Easter",
+      "date": "19 May, 2019",
+      "link": "/pdf/fifth-sunday-easter.pdf"
+    },
+    {
+      "title": "6th Sunday in Easter",
+      "date": "26 May, 2019",
+      "link": "/pdf/sixth-sunday-easter.pdf"
+    }
+  ],
+  "lent": [
+    {
+      "title": "Ash Wednesday",
+      "date": "06 March, 2019",
+      "link": "/pdf/ash-wednesday.pdf"
+    },
+    {
+      "title": "1st Sunday in Lent",
+      "date": "10 March, 2019",
+      "link": "/pdf/first-sunday-lent.pdf"
+    },
+    {
+      "title": "2nd Sunday in Lent",
+      "date": "17 March, 2019",
+      "link": "/pdf/second-sunday-lent.pdf"
+    },
+    {
+      "title": "3rd Sunday in Lent",
+      "date": "24 March, 2019",
+      "link": "/pdf/third-sunday-lent.pdf"
+    },
+    {
+      "title": "4th Sunday in Lent",
+      "date": "31 March, 2019",
+      "link": "/pdf/fourth-sunday-lent.pdf"
+    },
+    {
+      "title": "5th Sunday in Lent",
+      "date": "07 April, 2019",
+      "link": "/pdf/fifth-sunday-lent.pdf"
+    },
+    {
+      "title": "Palm Sunday",
+      "date": "14 April, 2019",
+      "link": "/pdf/palm-sunday.pdf"
+    }
+  ],
+  "ordinary": [
+    {
+      "title": "2nd Sunday in Ordinary Time",
+      "date": "20 January, 2019",
+      "link": "/pdf/second-sunday-ot.pdf"
+    },
+    {
+      "title": "3rd Sunday in Ordinary Time",
+      "date": "27 January, 2019",
+      "link": "/pdf/third-sunday-ot.pdf"
+    },
+    {
+      "title": "4th Sunday in Ordinary Time",
+      "date": "03 February, 2019",
+      "link": "/pdf/fourth-sunday-ot.pdf"
+    },
+    {
+      "title": "5th Sunday in Ordinary Time",
+      "date": "10 February, 2019",
+      "link": "/pdf/fifth-sunday-ot.pdf"
+    },
+    {
+      "title": "6th Sunday in Ordinary Time",
+      "date": "17 February, 2019",
+      "link": "/pdf/sixth-sunday-ot.pdf"
+    },
+    {
+      "title": "7th Sunday in Ordinary Time",
+      "date": "24 February, 2019",
+      "link": "/pdf/seventh-sunday-ot.pdf"
+    },
+    {
+      "title": "8th Sunday in Ordinary Time",
+      "date": "03 March, 2019",
+      "link": "/pdf/eighth-sunday-ot.pdf"
+    }
+  ]
+}

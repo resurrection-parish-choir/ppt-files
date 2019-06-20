@@ -1,11 +1,10 @@
 :root {
-  --mdc-theme-primary: #F9AA33;
-  --mdc-theme-background: #FFFBE6;
-  --mdc-theme-secondary: #F9AA33;
+  --mdc-theme-primary: #356859;
+  --mdc-theme-secondary: #37966f;
   --mdc-theme-on-primary: rgba(0, 0, 0, 0.38);
 }
 
-.mdc-card .mdc-list-item__text,
+.mdc-list-item__text,
 .mdc-top-app-bar .mdc-top-app-bar__title,
 .mdc-drawer .mdc-drawer__title {
   font-family: 'Raleway', sans-serif;
@@ -16,7 +15,7 @@ body {
   margin: 0;
   display: flex;
   height: 100vh;
-  background-color: #F9AA331E;
+  background-color: var(--mdc-theme-background);
 }
 .mdc-drawer-app-content {
   flex: auto;
@@ -78,7 +77,7 @@ body {
 }
 
 .mdc-drawer .mdc-list-item--activated {
-  color: #F9AA33DD;
+  color: #356859dd;
 }
 .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
   color: var(--mdc-theme-primary);
@@ -119,7 +118,13 @@ body {
     bottom: 2rem;
     right: 2rem;
   }
+
   .mdc-card {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  #main-content .mdc-list:not(.mdc-list--non-interactive) {
     margin-left: 25%;
     margin-right: 25%;
   }

@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
   <link rel="stylesheet" href="/stylesheets/index.css">
+  <link rel="stylesheet" href="/stylesheets/archive.css">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -126,12 +127,64 @@
 
     <main class="main-content" id="main-content">
       <div class="mdc-top-app-bar--fixed-adjust">
-        <ul class="mdc-list mdc-list--two-line">
-          <div class="mdc-card mdc-card--outlined">
-      
+
+        <div class="mdc-select mdc-select--outlined" id="year-select">
+          <i class="mdc-select__dropdown-icon material-icons">expand_more</i>
+          <select class="mdc-select__native-control">
+            <option value="" disabled selected></option>
+            <!-- <option value="year-a">
+              Year A
+            </option>
+            <option value="year-b">
+              Year B
+            </option> -->
+            <option value="year-c">
+              Year C
+            </option>
+          </select>
+          <div class="mdc-notched-outline">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch">
+              <label class="mdc-floating-label">Pick a Year</label>
+            </div>
+            <div class="mdc-notched-outline__trailing"></div>
           </div>
-        </ul>
+        </div>
+        
+        <div class="mdc-select mdc-select--outlined" id="season-select">
+          <i class="mdc-select__dropdown-icon material-icons">expand_more</i>
+          <select class="mdc-select__native-control">
+            <option value="" disabled selected></option>
+            <!-- <option value="advent">
+              Advent & Christmas
+            </option> -->
+            <option value="easter">
+              Easter
+            </option>
+            <option value="lent">
+              Lent
+            </option>
+            <option value="ordinary">
+              Ordinary Time
+            </option>
+          </select>
+          <div class="mdc-notched-outline">
+            <div class="mdc-notched-outline__leading"></div>
+            <div class="mdc-notched-outline__notch">
+              <label class="mdc-floating-label">Pick a Season</label>
+            </div>
+            <div class="mdc-notched-outline__trailing"></div>
+          </div>
+        </div>
+
+        <button class="mdc-button mdc-button--outlined action-button">
+          <span class="mdc-button__label">Search Files</span>
+        </button>
+
+        <ul class="mdc-list mdc-list--two-line"></ul>
+
       </div>
+      
     </main>
   </div>
 

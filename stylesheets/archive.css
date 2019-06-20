@@ -1,0 +1,44 @@
+.mdc-select {
+  display: flex;
+  margin: 1rem;
+  will-change: scroll-position;
+}
+
+.mdc-select .mdc-select__dropdown-icon {
+  background: none;
+  color: var(--mdc-theme-text-secondary-on-background);
+}
+
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-floating-label {
+  color: var(--mdc-theme-primary);
+}
+
+.mdc-select:not(.mdc-select--disabled).mdc-select--focused .mdc-select__dropdown-icon{
+  color: var(--mdc-theme-primary);
+  transform: rotate(180deg);
+}
+
+#year-select {
+  margin-top: 2rem;
+}
+
+.mdc-button {
+  margin: auto;
+  margin-bottom: 1rem; 
+  display: flex;
+}
+
+.mdc-list li {
+  animation: slide-up 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
