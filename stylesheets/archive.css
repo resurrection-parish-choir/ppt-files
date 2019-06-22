@@ -27,18 +27,3 @@
   margin-bottom: 1rem; 
   display: flex;
 }
-
-.mdc-list li {
-  animation: slide-up 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-@keyframes slide-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}

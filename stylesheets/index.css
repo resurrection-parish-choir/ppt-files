@@ -129,3 +129,19 @@ body {
     margin-right: 25%;
   }
 }
+
+.mdc-list:not(.mdc-list--non-interactive) li {
+  animation: slide-up 300ms cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

@@ -40,24 +40,13 @@ h2, h3 {
 }
 
 .mdc-tab-bar {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .mdc-tab__ripple {
   clip-path: circle(30% at 50% 50%);
 }
 
-.mdc-list li {
-  animation: slide-up 0.35s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-@keyframes slide-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+#main-content .mdc-list {
+  margin-bottom: 134px;
 }
