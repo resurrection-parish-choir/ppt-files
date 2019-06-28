@@ -63,8 +63,8 @@ material.archive.ready = function() {
             response.json()
               .then(data => {
                 archiveList.empty();
-                for (let x in data[selectedSeason]) {
-                  archiveList.append(handler.createListItem(data[selectedSeason][x]));
+                for (let item of data[selectedSeason]) {
+                  archiveList.append(handler.createListItem(item));
                 }
               })
             ;

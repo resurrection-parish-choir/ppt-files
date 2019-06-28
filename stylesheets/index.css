@@ -33,7 +33,6 @@ body {
   margin-top: 8px;
   margin-left: 16px;
   margin-right: 16px;
-  height: 56px;
   width: calc(100% - 32px);
   border-radius: 8px;
   background-color: #FFFFFF;
@@ -50,6 +49,14 @@ body {
 
 #app-bar .material-icons {
   color: var(--mdc-theme-text-icon-on-light);
+}
+
+#app-bar .nav-icon {
+  padding: 1rem;
+}
+
+#app-bar .search.material-icons {
+  padding: 1rem;
 }
 
 .app-fab--absolute {
