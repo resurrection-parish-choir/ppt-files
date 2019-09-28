@@ -27,7 +27,7 @@ material.home.ready = function() {
       $('.download.mdc-button')
         .on('click', event => {
           //dialog.open();
-          window.location.href = '/pdf/twenty-fifth-sunday-ot.pdf';
+          window.location.href = '/pdf/twenty-sixth-sunday-ot.pdf';
         })
       ;
       
