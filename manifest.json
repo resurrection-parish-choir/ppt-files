@@ -3,12 +3,12 @@
   "name": "Resurrection Parish Choir",
   "icons": [
     {
-      "src": "images/icon-192.png",
+      "src": "images/CLogo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/icon-192.png",
+      "src": "images/CLogo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
