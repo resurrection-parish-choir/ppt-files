@@ -1,6 +1,6 @@
 :root {
-  --mdc-theme-primary: #356859;
-  --mdc-theme-secondary: #37966f;
+  --mdc-theme-primary: #5D1049;
+  --mdc-theme-secondary: #4E0D3A;
   --mdc-theme-on-primary: rgba(0, 0, 0, 0.38);
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .mdc-drawer .mdc-list-item--activated {
-  color: #356859dd;
+  color: #5D1049dd;
 }
 .mdc-drawer .mdc-list-item--activated .mdc-list-item__graphic {
   color: var(--mdc-theme-primary);
